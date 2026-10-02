@@ -1,0 +1,21 @@
+{
+  "name": "university-club-system",
+  "version": "1.0.0",
+  "description": "University club membership application and committee evaluation system",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon --watch server.js --watch models --watch public --watch index.html --watch app.js --watch styles.css --ext js,json,html,css --delay 500ms --signal SIGTERM server.js",
+    "seed": "node seed.js"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "mongodb-memory-server": "^9.4.0",
+    "mongoose": "^8.4.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.10"
+  }
+}

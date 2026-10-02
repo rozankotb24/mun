@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MIU MUN & AL XIX — Application</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="top-accent-bar"></div>
+    <header class="topbar">
+      <div class="brand-wrap">
+        <div class="brand-mark">
+          <img src="logo.jpg" alt="MUN & AL Logo" class="brand-logo-img" />
+        </div>
+        <div>
+          <p class="eyebrow">MIU Model UN & Arab League</p>
+          <h1>MUN &amp; AL</h1>
+        </div>
+      </div>
+      <nav class="main-nav">
+        <a href="#apply">Apply</a>
+        <a href="#committee-dashboard">Committee Access</a>
+      </nav>
+    </header>
+
+    <main class="page-shell">
+      <section id="apply" class="panel panel-hero">
+        <div class="section-header">
+          <div class="badge-tag-wrap">
+            <span class="badge-tag">MIU MUN &amp; AL XIX</span>
+          </div>
+          <p class="eyebrow accent">New Member Application</p>
+          <h2>Join MUN &amp; AL</h2>
+        </div>
+
+        <form id="applicationForm" class="application-form">
+          <div class="grid two-col">
+            <label>
+              <span>First Name</span>
+              <input type="text" name="firstName" placeholder="Enter first name" required />
+            </label>
+            <label>
+              <span>Last Name</span>
+              <input type="text" name="lastName" placeholder="Enter last name" required />
+            </label>
+          </div>
+
+          <div class="grid two-col">
+            <label>
+              <span>University Email</span>
+              <input type="email" name="email" placeholder="example@miuegypt.edu.eg" required />
+            </label>
+            <label>
+              <span>Phone Number</span>
+              <input type="tel" name="phone" placeholder="012XXXXXXXXX" required />
+            </label>
+          </div>
+
+          <div class="grid two-col">
+            <label>
+              <span>Committee</span>
+              <select name="committee" id="committeeSelect" required>
+                <option value="">Select a committee</option>
+                <option value="IT">IT</option>
+                <option value="PR">PR</option>
+                <option value="FINANCE">FINANCE</option>
+                <option value="MEDIA">MEDIA</option>
+              </select>
+            </label>
+            <label>
+              <span>Interview Slot</span>
+              <select name="slot" id="slotSelect" required>
+                <option value="">Choose a free slot</option>
+              </select>
+            </label>
+          </div>
+
+          <button type="submit" class="primary-btn">Submit Application</button>
+        </form>
+      </section>
+
+      <section id="committee-dashboard" class="panel dashboard-panel">
+        <div class="section-header dashboard-header">
+          <div>
+            <p class="eyebrow accent">Committee Access</p>
+            <h2>Head Dashboard</h2>
+          </div>
+          <label class="committee-switcher">
+            <span>Active committee</span>
+            <select id="committeeAccessSelect">
+              <option value="IT">IT</option>
+              <option value="PR">PR</option>
+              <option value="FINANCE">FINANCE</option>
+              <option value="MEDIA">MEDIA</option>
+            </select>
+          </label>
+        </div>
+
+        <div id="dashboardSummary" class="dashboard-summary"></div>
+        <div id="applicantList" class="applicant-list"></div>
+      </section>
+    </main>
+
+    <div id="interviewModal" class="modal hidden" aria-hidden="true">
+      <div class="modal-backdrop" data-close="true"></div>
+      <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+        <div class="modal-header">
+          <div>
+            <p class="eyebrow accent">Interview</p>
+            <h3 id="modalTitle">Applicant Review</h3>
+          </div>
+          <button type="button" class="close-btn" id="closeInterviewModal" aria-label="Close">×</button>
+        </div>
+
+        <div id="interviewContent" class="interview-content"></div>
+      </div>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
